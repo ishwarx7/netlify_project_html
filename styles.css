@@ -42,14 +42,16 @@
 
        /* Navigation */
        nav {
-           background-color: #050506;
-           border-radius: 12px;
+           background-color: #e4e4eb21;
            display: flex;
            justify-content: space-between;
            align-items: center;
-           padding: 28px 0;
-           position: relative;
+           padding: 28px 20px;
+           /* position: fixed;  */
            z-index: 100;
+           border-radius: 20px;
+           height: 80px;
+           margin-top: 10px;
        }
 
        .logo {
@@ -67,8 +69,6 @@
        .nav-links {
            display: flex;
            gap: 40px;
-           align-items: center;
-
        }
 
        .nav-links a {
@@ -163,6 +163,7 @@
            padding: 0px 0px 120px;
            min-height: 100vh;
            position: relative;
+           padding-top: 150px;
        }
 
        .hero-content {
@@ -651,7 +652,7 @@
        .coming-soon {
            position: relative;
            height: 100vh;
-           color: #fff;
+           color: #ffffffe0;
            text-align: center;
            z-index: 1;
            display: flex;
@@ -661,7 +662,150 @@
            overflow: hidden;
        }
 
-       #vanta-section {
+       .ring {
+           position: absolute;
+           top: 40%;
+           left: 50%;
+           transform: translate(-50%, -50%);
+           border: 3px solid rgba(0, 255, 255, 0.151);
+           border-radius: 50%;
+       }
+
+       .ring1 {
+           width: 600px;
+           height: 600px;
+       }
+
+       .ring2 {
+           width: 800px;
+           height: 800px;
+       }
+
+       .planet-orbit,
+       .planet-orbit2 {
+           position: absolute;
+           width: 100%;
+           height: 100%;
+           top: 0;
+           left: 0;
+           transform-origin: center;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+       }
+
+       .planet-orbit {
+           animation: rotate 20s linear infinite;
+       }
+
+       .planet-orbit2 {
+           animation: rotateReverse 30s linear infinite;
+       }
+
+       .icon {
+           position: absolute;
+           font-size: 3rem;
+           color: rgba(0, 255, 255, 0.7);
+           transform-origin: center;
+       }
+
+       .icon1 {
+           transform: rotate(45deg) translateX(300px);
+           z-index: 2;
+       }
+
+       .icon2 {
+           transform: rotate(135deg) translateX(300px);
+           z-index: 0;
+       }
+
+       .icon3 {
+           transform: rotate(225deg) translateX(300px);
+           z-index: 2;
+       }
+
+       .icon4 {
+           transform: rotate(315deg) translateX(300px);
+           z-index: 0;
+       }
+
+       .icon5 {
+           transform: rotate(60deg) translateX(400px);
+           z-index: 2;
+       }
+
+       .icon6 {
+           transform: rotate(150deg) translateX(400px);
+           z-index: 0;
+       }
+
+       .icon7 {
+           transform: rotate(240deg) translateX(400px);
+           z-index: 2;
+       }
+
+       .icon8 {
+           transform: rotate(330deg) translateX(400px);
+           z-index: 0;
+       }
+
+       @keyframes rotate {
+           0% {
+               transform: rotate(0deg);
+           }
+
+           100% {
+               transform: rotate(360deg);
+           }
+       }
+
+       @keyframes rotateReverse {
+           0% {
+               transform: rotate(0deg);
+           }
+
+           100% {
+               transform: rotate(-360deg);
+           }
+       }
+
+    
+       .registered-box {
+           display: flex;
+           flex-direction: column;
+           align-items: flex-start;
+           gap: 10px;
+       }
+
+       .avatars-row {
+           display: flex;
+           align-items: center;
+           gap: 10px;
+       }
+
+       .avatar {
+           width: 48px;
+           height: 48px;
+           border-radius: 50%;
+           object-fit: cover;
+       }
+
+       .arrow {
+           width: 32px;
+           height: 32px;
+       }
+
+       .subtext {
+           font-size: 10px;
+           color: #ccc;
+       }
+
+       .highlight {
+           color: white;
+           font-weight: 500;
+       }
+
+       /* #vanta-section {
            width: 100vw;
            height: 100vh;
            position: relative;
@@ -700,11 +844,11 @@
 
        .opacity-10 {
            opacity: 0.1;
-       }
+       } */
 
        .coming-soon h1 {
-           font-size: 88px;
-           margin-bottom: 10px;
+           font-size: 68px;
+           margin-bottom: 20px;
        }
 
        .coming-soon h1:hover {
