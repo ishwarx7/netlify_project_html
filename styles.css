@@ -699,7 +699,7 @@
 
        .coming-soon h1 {
            font-size: 88px;
-           margin-bottom: 20px;
+           margin-bottom: 15px;
        }
        .coming-soon h1:hover {
            text-decoration-color: var(--primary);
