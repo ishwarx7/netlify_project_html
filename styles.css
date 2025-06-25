@@ -42,6 +42,8 @@
 
        /* Navigation */
        nav {
+           background-color: #050506;
+           border-radius: 12px;
            display: flex;
            justify-content: space-between;
            align-items: center;
@@ -646,30 +648,31 @@
            align-items: center;
            justify-content: center;
        } */
-.coming-soon {
-  position: relative;
-  height: 100vh;
-  color: #fff;
-  text-align: center;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-#vanta-section {
-  width: 100vw;
-  height: 100vh;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  color: white;
-  z-index: 0;
-}
+       .coming-soon {
+           position: relative;
+           height: 100vh;
+           color: #fff;
+           text-align: center;
+           z-index: 1;
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
+           overflow: hidden;
+       }
+
+       #vanta-section {
+           width: 100vw;
+           height: 100vh;
+           position: relative;
+           overflow: hidden;
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           flex-direction: column;
+           color: white;
+           z-index: 0;
+       }
 
        .wave-layer {
            position: absolute;
@@ -703,6 +706,7 @@
            font-size: 88px;
            margin-bottom: 10px;
        }
+
        .coming-soon h1:hover {
            text-decoration-color: var(--primary);
        }
