@@ -690,10 +690,13 @@
        .ring1 {
            width: var(--ring1-size);
            height: var(--ring1-size);
+           backdrop-filter: blur(2px);
+
        }
 
        .ring2 {
            width: var(--ring2-size);
+           backdrop-filter: blur(2px);
            height: var(--ring2-size);
        }
 
