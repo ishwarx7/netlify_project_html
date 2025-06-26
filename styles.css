@@ -817,7 +817,7 @@
            z-index: 0;
        }
 
-       h1 {
+      .influencer-profiles h1 {
            font-size: clamp(36px, 6vw, 68px);
            margin-bottom: 20px;
        }
