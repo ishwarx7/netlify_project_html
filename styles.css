@@ -203,11 +203,6 @@
            font-size: 1.2em;
 
        }
-
-       .change-text {
-           display: inline-block;
-           animation: changeText 5s infinite alternate;
-       }
        
        .rotating-text-wrapper {
            position: relative;
