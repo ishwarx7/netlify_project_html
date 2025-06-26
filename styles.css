@@ -634,32 +634,47 @@
            color: #00ffff;
        }
 
+       /* coming soon section */
 
+       :root {
+           --ring1-size: min(80vw, 600px);
+           --ring2-size: min(95vw, 800px);
+           --ring-stroke: 0.2vw;
+           --primary: #0ff;
+           --success: #00e0c0;
+       }
 
-       /* Coming Soon Section */
-       /* .coming-soon {
-           text-align: center;
-           padding: 100px 20px;
-           color: #fff;
-           position: relative;
-           z-index: 1;
-           overflow: hidden;
-           display: flex;
-           flex-direction: column;
-           align-items: center;
-           justify-content: center;
-       } */
+       * {
+           margin: 0;
+           padding: 0;
+           box-sizing: border-box;
+       }
+
+       body {
+           background: #000;
+           font-family: sans-serif;
+           color: #ffffffe0;
+       }
+
        .coming-soon {
            position: relative;
            height: 100vh;
-           color: #ffffffe0;
-           text-align: center;
-           z-index: 1;
            display: flex;
-           flex-direction: column;
            justify-content: center;
            align-items: center;
            overflow: hidden;
+           text-align: center;
+       }
+
+       .content {
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, -50%);
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           z-index: 3;
        }
 
        .ring {
@@ -667,18 +682,28 @@
            top: 50%;
            left: 50%;
            transform: translate(-50%, -50%);
-           border: 3px solid rgba(0, 255, 255, 0.151);
+           border: var(--ring-stroke) solid rgba(0, 255, 255, 0.151);
            border-radius: 50%;
+           box-shadow: 0 0 20px rgba(0, 255, 255, 0.4), 0 0 40px rgba(0, 255, 255, 0.2);
+           transition: transform 0.3s ease;
+       }
+
+       .coming-soon:hover .ring1 {
+           transform: translate(-50%, -50%) scale(1.05);
+       }
+
+       .coming-soon:hover .ring2 {
+           transform: translate(-50%, -50%) scale(1.08);
        }
 
        .ring1 {
-           width: 600px;
-           height: 600px;
+           width: var(--ring1-size);
+           height: var(--ring1-size);
        }
 
        .ring2 {
-           width: 800px;
-           height: 800px;
+           width: var(--ring2-size);
+           height: var(--ring2-size);
        }
 
        .planet-orbit,
@@ -704,49 +729,75 @@
 
        .icon {
            position: absolute;
-           font-size: 3rem;
+           font-size: clamp(1.5rem, 3vw, 3rem);
            color: rgba(0, 255, 255, 0.7);
            transform-origin: center;
        }
 
        .icon1 {
-           transform: rotate(45deg) translateX(300px);
+           transform: rotate(45deg) translateX(calc(var(--ring1-size) / 2));
            z-index: 2;
        }
 
        .icon2 {
-           transform: rotate(135deg) translateX(300px);
+           transform: rotate(135deg) translateX(calc(var(--ring1-size) / 2));
            z-index: 0;
        }
 
        .icon3 {
-           transform: rotate(225deg) translateX(300px);
+           transform: rotate(225deg) translateX(calc(var(--ring1-size) / 2));
            z-index: 2;
        }
 
        .icon4 {
-           transform: rotate(315deg) translateX(300px);
+           transform: rotate(315deg) translateX(calc(var(--ring1-size) / 2));
            z-index: 0;
        }
 
        .icon5 {
-           transform: rotate(60deg) translateX(400px);
+           transform: rotate(60deg) translateX(calc(var(--ring2-size) / 2));
            z-index: 2;
        }
 
        .icon6 {
-           transform: rotate(150deg) translateX(400px);
+           transform: rotate(150deg) translateX(calc(var(--ring2-size) / 2));
            z-index: 0;
        }
 
        .icon7 {
-           transform: rotate(240deg) translateX(400px);
+           transform: rotate(240deg) translateX(calc(var(--ring2-size) / 2));
            z-index: 2;
        }
 
        .icon8 {
-           transform: rotate(330deg) translateX(400px);
+           transform: rotate(330deg) translateX(calc(var(--ring2-size) / 2));
            z-index: 0;
+       }
+
+       h1 {
+           font-size: clamp(36px, 6vw, 68px);
+           margin-bottom: 20px;
+       }
+
+       p {
+           font-size: clamp(14px, 2.5vw, 18px);
+           margin-bottom: 20px;
+       }
+
+       .register-btn {
+           background: var(--success);
+           border: none;
+           padding: 12px 30px;
+           font-size: clamp(14px, 2vw, 16px);
+           font-weight: bold;
+           border-radius: 8px;
+           cursor: pointer;
+           transition: background 0.3s, box-shadow 0.3s;
+       }
+
+       .register-btn:hover {
+           background: #30cfc0;
+           box-shadow: 0 0 20px #30cfc0, 0 0 40px #30cfc0;
        }
 
        @keyframes rotate {
@@ -769,137 +820,6 @@
            }
        }
 
-    
-       .registered-box {
-           display: flex;
-           flex-direction: column;
-           align-items: flex-start;
-           gap: 10px;
-       }
-
-       .avatars-row {
-           display: flex;
-           align-items: center;
-           gap: 10px;
-       }
-
-       .avatar {
-           width: 48px;
-           height: 48px;
-           border-radius: 50%;
-           object-fit: cover;
-       }
-
-       .arrow {
-           width: 32px;
-           height: 32px;
-       }
-
-       .subtext {
-           font-size: 10px;
-           color: #ccc;
-       }
-
-       .highlight {
-           color: white;
-           font-weight: 500;
-       }
-
-       /* #vanta-section {
-           width: 100vw;
-           height: 100vh;
-           position: relative;
-           overflow: hidden;
-           display: flex;
-           align-items: center;
-           justify-content: center;
-           flex-direction: column;
-           color: white;
-           z-index: 0;
-       }
-
-       .wave-layer {
-           position: absolute;
-           inset: 0;
-           pointer-events: none;
-           z-index: -1;
-       }
-
-       .wave-layer svg {
-           width: 100%;
-           height: ;
-           display: block;
-           position: absolute;
-           top: 0;
-           left: 0;
-       }
-
-       .opacity-25 {
-           opacity: 0.25;
-       }
-
-       .opacity-15 {
-           opacity: 0.15;
-       }
-
-       .opacity-10 {
-           opacity: 0.1;
-       } */
-
-       .coming-soon h1 {
-           font-size: 68px;
-           margin-bottom: 20px;
-       }
-
-       .coming-soon h1:hover {
-           text-decoration-color: var(--primary);
-       }
-
-
-       .coming-soon p {
-           font-size: 18px;
-           margin-bottom: 20px;
-       }
-
-       .register-btn {
-           background-color: var(--success);
-           border: none;
-           padding: 12px 30px;
-           margin-bottom: 230px;
-           font-size: 16px;
-           font-weight: bold;
-           border-radius: 8px;
-           cursor: pointer;
-           transition: background 0.3s ease;
-       }
-
-       .register-btn:hover {
-           background-color: #30cfc0;
-       }
-
-       /* benefits section */
-       /* h2,
-       .benefitHeading {
-           font-family: 'Segoe UI', sans-serif;
-           color: #fff;
-           font-size: 2rem;
-           font-weight: 700;
-           line-height: 1.2;
-           text-align: center;
-           display: flex;
-           justify-content: center;
-           align-items: center;
-           width: 100%;
-       }
-
-       .benefitHeading .highlight {
-           color: #00e0d0;
-       }
-
-       span.highlight {
-           color: #40e0d0;
-           font-weight: bold;
-       } */
 
        /* How It Works Section */
        .how-it-works {
