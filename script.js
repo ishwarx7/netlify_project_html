@@ -74,3 +74,46 @@ document.addEventListener('DOMContentLoaded', function () {
 
     observer.observe(document.querySelector('.stats-section'));
 });
+//features 
+ const tabs = document.querySelectorAll('.tab');
+  const slider = document.getElementById('slider');
+  const content = document.getElementById('tab-content');
+  const inner = document.getElementById('tab-content-inner');
+  const shutter = document.getElementById('shutter');
+
+  const data = {
+    brands: [
+      "Find perfect influencers easily.",
+      "Boost your brand awareness.",
+      "Track performance and ROI.",
+      "Hassle-free collaborations."
+    ],
+    influencer: [
+      "Brand deals in one place.",
+      "Grow your reach and income.",
+      "Earn from referrals and reviews.",
+      "Safe & transparent payouts."
+    ]
+  };
+
+  tabs.forEach((tab, i) => {
+    tab.addEventListener('click', () => {
+      if (tab.classList.contains('active')) return;
+
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      slider.style.left = `${i * 50}%`;
+
+      const direction = tab.dataset.target === 'brands' ? 'left' : 'right';
+      shutter.className = `shutter active ${direction}`;
+
+      setTimeout(() => {
+        const selected = tab.dataset.target;
+        inner.innerHTML = `<ul>${data[selected].map(item => `<li>${item}</li>`).join('')}</ul>`;
+      }, 250);
+
+      setTimeout(() => {
+        shutter.className = `shutter ${direction}`;
+      }, 600);
+    });
+  });
