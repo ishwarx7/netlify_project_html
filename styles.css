@@ -208,6 +208,60 @@
            display: inline-block;
            animation: changeText 5s infinite alternate;
        }
+       
+       .rotating-text-wrapper {
+           position: relative;
+           display: inline-block;
+           height: 1.2em;
+           width: max-content;
+           color: var(--light);
+       }
+
+       .rotating-text {
+           position: absolute;
+           left: 0;
+           opacity: 0;
+           animation: fadeWords 6s infinite;
+       }
+
+       .rotating-text:nth-child(1) {
+           animation-delay: 0s;
+       }
+
+       .rotating-text:nth-child(2) {
+           animation-delay: 2s;
+       }
+
+       .rotating-text:nth-child(3) {
+           animation-delay: 4s;
+       }
+
+       @keyframes fadeWords {
+           0% {
+               opacity: 0;
+               transform: translateY(10px);
+           }
+
+           10% {
+               opacity: 1;
+               transform: translateY(0);
+           }
+
+           30% {
+               opacity: 1;
+               transform: translateY(0);
+           }
+
+           40% {
+               opacity: 0;
+               transform: translateY(-10px);
+           }
+
+           100% {
+               opacity: 0;
+               transform: translateY(-10px);
+           }
+       }
 
        .hero p.subhead {
            font-size: 28px;
