@@ -203,7 +203,7 @@
            font-size: 1.2em;
 
        }
-       
+
        .rotating-text-wrapper {
            position: relative;
            display: inline-block;
@@ -693,8 +693,8 @@
            --success: #00e0c0;
        }
 
-     
-     
+
+
 
        .coming-soon {
            position: relative;
@@ -817,10 +817,17 @@
            z-index: 0;
        }
 
-         .content h1 {
+       .content h1 {
            font-size: clamp(32px, 6vw, 68px);
            margin-bottom: 20px;
        }
+
+       .content h1:hover {
+           color: black;
+           text-shadow: 0 0 10px #30cfc0, 0 0 10px #30cfc0;
+
+       }
+
        p {
            font-size: clamp(14px, 2.5vw, 18px);
            margin-bottom: 20px;
@@ -899,10 +906,14 @@
            position: relative;
            display: flex;
            background: #1a1a1a;
-           border: 2px solid #3CE7BE;
            border-radius: 50px;
            overflow: hidden;
            margin-bottom: 20px;
+       }
+
+       .tabs:hover {
+           box-shadow: 0 0 10px #30cfc0, 0 0 10px #30cfc0;
+
        }
 
        .tab {
@@ -941,7 +952,6 @@
 
        .tab-content {
            background: #1e1e1e;
-           border: 1px solid #3CE7BE;
            padding: 20px;
            border-radius: 12px;
            position: relative;
@@ -1021,7 +1031,8 @@
            overflow: hidden;
            box-shadow: 0 0 15px #3CE7BE33;
        }
-        .vertical-capsule:hover{
+
+       .vertical-capsule:hover {
            box-shadow: 0 0 10px #30cfc0, 0 0 10px #30cfc0;
 
        }
@@ -1049,7 +1060,9 @@
            border: 1px solid #5a565676;
 
        }
-        .side-circle:hover,.side-rectangle:hover {
+
+       .side-circle:hover,
+       .side-rectangle:hover {
            box-shadow: 0 0 10px #30cfc0, 0 0 10px #30cfc0;
        }
 
@@ -1094,7 +1107,7 @@
            }
        }
 
-       
+
        /* How It Works Section */
        .how-it-works {
            padding: 150px 0;
