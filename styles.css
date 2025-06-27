@@ -1610,11 +1610,41 @@
 
 
        /* Footer */
-       footer {
-           background: #050505;
-           padding: 80px 0 40px;
-           position: relative;
-       }
+    footer {
+  position: relative;
+  padding: 100px 20px 20px;
+  color: white;
+  text-align: center;
+  background: linear-gradient(to bottom, #0f1219, #1a1a1a);
+  z-index: 1;
+  overflow: hidden;
+}
+
+footer::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: url('images/footer_image.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+footer::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.169) 0%, transparent 70%);
+  z-index: 1;
+  pointer-events: none;
+}
+
 
        .footer-grid {
            display: grid;
