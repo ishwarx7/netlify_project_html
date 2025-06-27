@@ -1018,9 +1018,12 @@
        .vertical-capsule {
            height: 300px;
            border-radius: 60px;
-           border: 4px solid #3CE7BE;
            overflow: hidden;
            box-shadow: 0 0 15px #3CE7BE33;
+       }
+        .vertical-capsule:hover{
+           box-shadow: 0 0 10px #30cfc0, 0 0 10px #30cfc0;
+
        }
 
        .vertical-capsule img {
@@ -1043,12 +1046,16 @@
            justify-content: center;
            align-items: center;
            padding: 10px;
+           border: 1px solid #5a565676;
+
+       }
+        .side-circle:hover,.side-rectangle:hover {
+           box-shadow: 0 0 10px #30cfc0, 0 0 10px #30cfc0;
        }
 
        .side-circle {
            height: 120px;
            border-radius: 50%;
-           border: 3px solid #3CE7BE;
            background: radial-gradient(circle, #0e0e0e 40%, #3CE7BE22 100%);
            box-shadow: 0 0 10px #3CE7BE33;
            text-align: center;
@@ -1066,7 +1073,6 @@
 
        .side-rectangle {
            min-height: 80px;
-           border: 3px solid #40e0d0;
            border-radius: 12px;
            background: rgba(64, 224, 208, 0.05);
            text-align: center;
