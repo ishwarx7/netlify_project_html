@@ -1,4 +1,17 @@
+//Auto hide sticky header
 
+let lastScroll = 0;
+  const nav = document.querySelector("nav");
+
+  window.addEventListener("scroll", () => {
+    const currentScroll = window.pageYOffset;
+    if (currentScroll > lastScroll) {
+      nav.classList.add("hide");
+    } else {
+      nav.classList.remove("hide");
+    }
+    lastScroll = currentScroll;
+  });
 // Add animations and interactions
 document.addEventListener('DOMContentLoaded', function () {
     // Hero text animation
