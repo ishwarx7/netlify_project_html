@@ -79,17 +79,21 @@
        }
 
        .nav-links {
-           display: flex;
+            display: flex;
+           justify-content: center;
            gap: 40px;
        }
 
        .nav-links a {
-           color: var(--light);
+            color: var(--light);
            text-decoration: none;
            font-weight: 500;
            transition: all 0.3s ease;
            position: relative;
            font-size: 17px;
+           padding: 6px 18px;
+           border-radius: 8px;
+           border: 1px solid transparent;
        }
 
        .nav-links a:hover {
